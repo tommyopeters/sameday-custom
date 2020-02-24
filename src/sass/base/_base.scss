@@ -17,11 +17,12 @@ body {
   font-size: 2rem;
   height: 100vh;
   width: 100vw;
+  position: relative;
   // overflow: scroll;
 }
 .App {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: grid;
   grid-template-columns: max-content 1fr;
 }
