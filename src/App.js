@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import SideNav from "./components/SideNav";
 import Product from "./components/Product";
 import Productions from "./components/Productions";
@@ -17,6 +18,7 @@ function App() {
           <Header />
           <Route path="/" component={Productions} exact />
           <Route path="/product/:id" component={Product} />
+          <Footer />
         </div>
       </div>
     </Router>
