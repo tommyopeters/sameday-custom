@@ -10,10 +10,11 @@
       flex-grow: 1;
       display: flex;
       font-family: "Helvetica Neue", sans-serif;
+      font-size: 3rem;
 
       .production-icon {
         display: block;
-        height: 3.5rem;
+        height: 2.5rem;
         margin-right: 3rem;
 
         object {
@@ -39,7 +40,7 @@
     justify-content: center;
 
     &-icon {
-      height: 3.5rem;
+      height: 2.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -57,6 +58,7 @@
     &-cancel {
       font-weight: bold;
       margin: 0 2rem;
+      color: #818181;
     }
   }
   &-body {
@@ -65,10 +67,118 @@
 
     .display-options {
       display: flex;
+      padding-left: 1rem;
+      align-items: flex-start;
 
       .tabs {
         flex-grow: 1;
         display: flex;
+        align-items: center;
+
+        div.tab-option {
+          padding-bottom: 2rem;
+          &-inner {
+            display: flex;
+            h3 {
+              font-size: 2.2rem;
+              font-family: "Helvetica Neue", sans-serif;
+              font-weight: 500;
+              margin-right: 2.5rem;
+            }
+            .production-number {
+              color: #9b9b9b;
+              font-size: 1.7rem;
+              margin-right: 2.5rem;
+            }
+            .awaiting-count {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 100%;
+              height: 2.5rem;
+              width: 2.5rem;
+              background-color: #d80b0b;
+              font-size: 1.5rem;
+
+              margin-right: 2.5rem;
+              color: white;
+              font-weight: bold;
+            }
+          }
+
+          &.active {
+            h3 {
+              color: $color-primary;
+            }
+            border-bottom: 0.5rem solid $color-primary;
+          }
+          &:not(:last-child) {
+            margin-right: 2.5rem;
+            .tab-option-inner {
+              border-right: 1px solid #9b9b9b;
+            }
+          }
+        }
+      }
+      .display-actions {
+        display: flex;
+        align-items: center;
+
+        .button-small {
+          background-color: $color-primary;
+          color: white;
+        }
+        .mark-as-complete {
+          font-weight: 500;
+          color: #1a3a54;
+          margin-right: 2rem;
+
+          i {
+            margin-left: 1rem;
+            color: #7e7e7e;
+          }
+        }
+        .save {
+          padding: 1rem 3.5rem;
+          background-color: #d0d0d0;
+        }
+      }
+    }
+  }
+
+  &-body {
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 1rem;
+      text-align: start;
+
+      input[type="checkbox"] {
+        border: none;
+        outline: none;
+        background-color: red;
+      }
+
+      tr {
+        margin-bottom: 1rem;
+      }
+      thead {
+        background-color: #eeeeee;
+        th {
+          padding: 1.5rem;
+          font-size: 2re;
+          text-align: start;
+        }
+      }
+      tbody {
+        tr {
+          box-shadow: 0px 3px 50px #007bff00;
+        }
+        td {
+          padding: 1.5rem;
+          font-size: 1.8rem;
+          text-align: start;
+        }
       }
     }
   }

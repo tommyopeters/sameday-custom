@@ -34,24 +34,33 @@ class Productions extends Component {
         <div className="production-body">
           <div className="display-options">
             <div className="tabs">
-              <div className="tab-option">
-                All Productions <span className="production-number">192</span>
+              <div className="tab-option active">
+                <div className="tab-option-inner">
+                  <h3>All Productions</h3>
+                  <span className="production-number">192</span>
+                </div>
               </div>
               <div className="tab-option">
-                Awaiting Production{" "}
-                <NotificationCounter color="red" value="19" />
+                <div className="tab-option-inner">
+                  <h3>Awaiting Production</h3>
+                  <span className="awaiting-count">19</span>
+                </div>
               </div>
-              <div className="tab-option">Completed</div>
+              <div className="tab-option">
+                <div className="tab-option-inner">
+                  <h3>Completed</h3>
+                </div>
+              </div>
             </div>
             <div className="display-actions">
               <div className="button button-small">Print worksheet</div>
               <div className="mark-as-complete">
                 Mark as Complete <i className="fas fa-caret-down"></i>
               </div>
-              <div className="button">Save</div>
+              <div className="button save">Save</div>
             </div>
           </div>
-          <table className="production-table">
+          <table className="production-table" cellSpacing="0">
             <thead>
               <tr>
                 <th>
@@ -69,6 +78,31 @@ class Productions extends Component {
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td>
+                  <input type="checkbox" name="select" id="" />
+                </td>
+                <td>#232JODJSDKN2</td>
+                <td>#232JODJSDKN2</td>
+                <td>
+                  <div className="details"></div>
+                </td>
+                <td>
+                  <div className="button">Royal</div>
+                </td>
+                <td>L X 4</td>
+                <td>DTG Print</td>
+                <td>
+                  <div className="rush-shipping">Rush Shipping</div>
+                </td>
+                <td>
+                  <div className="delivery-date">23 - June - 2019</div>{" "}
+                  <div className="time-left">
+                    Time Left <span>10:00:00</span>
+                  </div>
+                </td>
+                <td>Running 2 of 5</td>
+              </tr>
               <tr>
                 <td>
                   <input type="checkbox" name="select" id="" />
